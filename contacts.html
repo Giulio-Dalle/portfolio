@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — Giulio Dalle Carbonare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- HEADER (pagine interne) -->
+<header class="py-6 px-6 border-b fixed top-0 left-0 w-full bg-white/80 backdrop-blur-lg z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <!-- LOGO GDC -->
+    <a href="index.html" class="font-bold transition transform hover:scale-[1.05]">
+      GDC
+    </a>
+    <!-- NAV -->
+    <nav class="space-x-4">
+      <a href="projects.html" class="inline-block text-sm text-gray-900 transition transform hover:scale-[1.05]">
+        Projects
+      </a>
+      <a href="about_me.html" class="inline-block text-sm text-gray-900 transition transform hover:scale-[1.05]">
+        CV
+      </a>
+      <a href="contacts.html" class="inline-block text-sm text-gray-900 font-semibold hover:scale-[1.05]">
+        Contact
+      </a>
+    </nav>
+  </div>
+</header>
+<!-- OFFSET per evitare che il contenuto salga sotto l’header -->
+<div class="h-20"></div>
+  
+  <!-- MAIN -->
+  <main class="max-w-3xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-bold mb-6">Contact Me</h1>
+    <p class="text-gray-700 mb-8">
+      For collaborations, projects, or just to have a chat, you can write to me directly below.
+    </p>
+
+    <!-- FORM -->
+    <form id="contactForm" class="space-y-6 bg-gray-50 p-8 rounded-2xl shadow-sm border">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <input type="text" id="nome" name="nome" required 
+                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black transition"/>
+        </div>
+        <div>
+          <label for="cognome" class="block text-sm font-medium text-gray-700 mb-1">Surname</label>
+          <input type="text" id="cognome" name="cognome" required 
+                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black transition"/>
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input type="email" id="email" name="email" required 
+               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black transition"/>
+      </div>
+
+      <div>
+        <label for="messaggio" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea id="messaggio" name="messaggio" rows="5" required
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black transition"></textarea>
+      </div>
+
+      <button type="submit" 
+              class="w-full md:w-auto px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition">
+        Send message →
+      </button>
+    </form>
+
+    <div id="successMessage" class="hidden mt-6 text-green-600 text-center font-semibold">
+      ✅ Your message is ready to go!
+    </div>
+
+
+  </main>
+
+  <!-- FOOTER -->
+   <footer class="border-t py-8 px-6 text-sm text-gray-500">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+      <div class="md:w-2/3 leading-relaxed">
+        <p class="text-gray-400">© 2026 Giulio Dalle Carbonare — All rights reserved.</p>
+        <p class="text-gray-400 mt-2">All visual, textual, and design materials are protected by copyright law.</p>
+        <p class="text-gray-400">Reproduction, distribution, or use without prior written authorization is strictly prohibited.</p>
+      </div>
+      <div class="flex space-x-6 md:text-right">
+        <a href="https://www.linkedin.com/in/giulio-dalle-carbonare-a5487524b/" target="_blank" class="hover:text-gray-800 transition">LinkedIn</a>
+        <a href="mailto:giulio.dallecarbonare@gmail.com" class="hover:text-gray-800 transition">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const cognome = document.getElementById('cognome').value;
+      const email = document.getElementById('email').value;
+      const messaggio = document.getElementById('messaggio').value;
+
+      const subject = encodeURIComponent(`Nuovo messaggio dal portfolio di ${nome} ${cognome}`);
+      const body = encodeURIComponent(`Nome: ${nome} ${cognome}\nEmail: ${email}\n\nMessaggio:\n${messaggio}`);
+
+      const mailtoLink = `mailto:giulio.dallecarbonare@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+
+      document.getElementById('successMessage').classList.remove('hidden');
+    });
+  </script>
+
+</body>
+</html>

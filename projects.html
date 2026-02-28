@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>All Projects — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- HEADER (pagine interne) -->
+<header class="py-6 px-6 border-b fixed top-0 left-0 w-full bg-white/80 backdrop-blur-lg z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <!-- LOGO GDC -->
+    <a href="index.html" class="font-bold transition transform hover:scale-[1.05]">
+      GDC
+    </a>
+    <!-- NAV -->
+    <nav class="space-x-4">
+      <a href="projects.html" class="inline-block text-sm text-gray-900 font-semibold transform hover:scale-[1.05]">
+        Projects
+      </a>
+      <a href="about_me.html" class="inline-block text-sm text-gray-900 transition transform hover:scale-[1.05]">
+        CV
+      </a>
+      <a href="contacts.html" class="inline-block text-sm text-gray-900 transform hover:scale-[1.05]">
+        Contact
+      </a>
+    </nav>
+  </div>
+</header>
+<!-- OFFSET per evitare che il contenuto salga sotto l’header -->
+<div class="h-20"></div>
+
+
+  <main class="max-w-6xl mx-auto py-12 px-6">
+    <h1 class="text-3xl font-bold mb-6">Portfolio</h1>
+
+    <div class="mb-6">
+      <button data-filter="all" class="px-4 py-2 rounded bg-black text-white mr-2">All</button>
+      <button data-filter="branding" class="px-4 py-2 rounded bg-gray-100 mr-2">Branding</button>
+      <button data-filter="editorial design" class="px-4 py-2 rounded bg-gray-100 mr-2">Editorial design</button>
+      <button data-filter="space design" class="px-4 py-2 rounded bg-gray-100 mr-2">Space design</button>
+      <button data-filter="graphic design" class="px-4 py-2 rounded bg-gray-100 mr-2">Graphic design</button>
+
+
+    </div>
+
+    <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- ciascun progetto ha attributo data-tags (comma separated) -->
+      <a href="project_wallace.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Editorial design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Wallace/Wallace-01.jpg"
+          alt="Visual del progetto Libro Visivo"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Visual Book</h3>
+        <p class="text-sm text-gray-500">Editorial design</p>
+      </a>
+
+      <a href="project_atta.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Branding">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Atta/Atta14.jpg"
+          alt="Visual del progetto Atta Demolitions"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Atta Demolitions</h3>
+        <p class="text-sm text-gray-500">Branding</p>
+      </a>
+
+      <a href="project_monti.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Editorial design, Space design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Monti/Monti-01.jpg"
+          alt="Visual del progetto Sguardi in prospettiva"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Looking in Perspective</h3>
+        <p class="text-sm text-gray-500">Editorial design, Space design</p>
+      </a>
+
+      <a href="project_bookbinding.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Editorial design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Bookbinding/Bookbinding-01.jpg"
+          alt="Visual del progetto Rilegatura artigianale"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Bookbinding</h3>
+        <p class="text-sm text-gray-500">Editorial design</p>
+      </a>
+
+      <a href="project_sanson.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Branding">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Sanson/Sanson-05.jpg"
+          alt="Visual del progetto Gelati Sanson"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Sanson Ice Creams</h3>
+        <p class="text-sm text-gray-500">Branding</p>
+      </a>   
+      
+      <a href="project_inception.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Graphic Design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Inception/Inception-01.jpg"
+          alt="Visual del progetto Inception"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Inception</h3>
+        <p class="text-sm text-gray-500">Graphic design</p>
+      </a>         
+
+      <a href="project_typeismoney.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Editorial design, Space design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/TypeIsMoney/Occhio-02.jpg"
+          alt="Visual del progetto Occhio al prezzo!"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Eyes on the Prize!</h3>
+        <p class="text-sm text-gray-500">Editorial design, Space design</p>
+      </a>       
+      
+      
+      <a href="project_sports.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Graphic design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Sports graphics/Sports-01.jpg"
+          alt="Visual del progetto Grafiche sportive"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Sports Graphics</h3>
+        <p class="text-sm text-gray-500">Graphic design</p>
+      </a>  
+
+      <a href="project_atlante.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Graphic design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Atlante/Atlante-01.jpg"
+          alt="Visual del progetto Dalla Mappa al Mondo"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">From Map to the World</h3>
+        <p class="text-sm text-gray-500">Graphic design</p>
+      </a>     
+      
+      <a href="project_lenticchie.html" class="project-card block bg-white p-4 rounded shadow transform hover:-translate-y-1 transition" data-tags="Editorial design">
+        <div class="relative h-40 bg-gray-200 rounded mb-3 overflow-hidden">
+          <img src="Images/Lenticchie/Lenticchie-01.jpg"
+          alt="Visual del progetto Nonna, che buone le lenticchie!"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <h3 class="font-semibold">Grandma, your lentils are amazing!</h3>
+        <p class="text-sm text-gray-500">Graphic design</p>
+      </a>           
+    </div>
+  </main>
+
+  <footer class="border-t py-8 px-6 text-sm text-gray-500">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+      <div class="md:w-2/3 leading-relaxed">
+        <p class="text-gray-400">© 2026 Giulio Dalle Carbonare — All rights reserved.</p>
+        <p class="text-gray-400 mt-2">All visual, textual, and design materials are protected by copyright law.</p>
+        <p class="text-gray-400">Reproduction, distribution, or use without prior written authorization is strictly prohibited.</p>
+      </div>
+      <div class="flex space-x-6 md:text-right">
+        <a href="https://www.linkedin.com/in/giulio-dalle-carbonare-a5487524b/" target="_blank" class="hover:text-gray-800 transition">LinkedIn</a>
+        <a href="mailto:giulio.dallecarbonare@gmail.com" class="hover:text-gray-800 transition">Email</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  
+  <script>
+    // Filtraggio semplice: usa i bottoni o l'hash in URL (es. projects.html#branding)
+    const grid = document.getElementById('projects-grid');
+    const cards = Array.from(document.querySelectorAll('.project-card'));
+    const filterButtons = document.querySelectorAll('[data-filter]');
+
+    function filterProjects(tag) {
+      if (tag === 'all') {
+        cards.forEach(c => c.style.display = '');
+        return;
+      }
+      cards.forEach(c => {
+        const tags = c.dataset.tags.split(',').map(s => s.trim().toLowerCase());
+        c.style.display = tags.includes(tag) ? '' : 'none';
+      });
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const t = btn.getAttribute('data-filter');
+        filterProjects(t);
+        // highlight active
+            filterButtons.forEach(b => {
+      b.classList.remove('bg-black', 'text-white');
+      b.classList.add('bg-gray-100', 'text-gray-900');
+    });
+    btn.classList.remove('bg-gray-100', 'text-gray-900');
+    btn.classList.add('bg-black', 'text-white');
+  });
+
+      });
+
+
+    // Se arrivi con hash (da home), applichiamo il filtro
+    window.addEventListener('load', () => {
+      const hash = location.hash.replace('#','');
+      if (hash) {
+        // trova bottone corrispondente e simula click
+        const btn = Array.from(filterButtons).find(b => b.getAttribute('data-filter') === hash);
+        if (btn) btn.click();
+        // scroll verso griglia se necessario
+        setTimeout(()=>{ document.getElementById('projects-grid').scrollIntoView({behavior:'smooth'}); }, 200);
+      }
+    });
+
+    // --- Ordine casuale dei progetti ---
+window.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('projects-grid');
+  const cards = Array.from(grid.children);
+
+  // Algoritmo di Fisher-Yates Shuffle
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[j]] = [cards[j], cards[i]];
+  }
+
+  // Ricolloca le card in ordine casuale
+  cards.forEach(card => grid.appendChild(card));
+});
+
+  </script>
+</body>
+</html>
